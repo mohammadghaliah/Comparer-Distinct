@@ -1,0 +1,21 @@
+<html>
+  Comparer & Distinct
+</html>
+
+<!-- namespace xxxxxxxxxxxxxxxxxx
+{ 
+private static PermissionComparer _instance;
+
+public static PermissionComparer : IEqualityComparer<Permission> Instance
+  {
+    get => _instance = _instance != null ? _instance : new PermissionComparer();
+  }
+
+  public bool Equals([AllowNull] Permission x, [AllowNull] Permission y) => x?.code == y.?code;
+
+  public int GetHashCode([DisallowNull] Permission obj) => obj.GetHashCode();
+} -->
+
+<!-- ------------------------------------------------ -->
+
+<!-- List<Permission> exsistPermissions = permissionResult.Distinct(PermissionComparer.Instance).ToList(); -->
